@@ -1,1 +1,32 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: black;
+}
+img {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  top: 70px;
+}
+h1 {
+  color: whitesmoke;
+  font-family: "Monoton", cursive;
+}
+.neon-title-h1 {
+  border: 3px solid whitesmoke;
+  box-shadow: inset 0 0 10px #ffc400, 0 0 10px #ffc400;
+  border-radius: 50px;
+  margin: auto;
+  text-align: center;
+  max-width: 500px;
+  padding: 1.5rem;
+}
+.neon-title {
+  text-shadow: 0 0 15px #ffc400, 0 0 20px #ffc400;
+}
+.cards-container {
+  border: 3px solid whitesmoke;
+  margin: 2rem 10rem 0 10rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px red, 0 0 10px red;
+}
