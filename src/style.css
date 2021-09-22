@@ -2,6 +2,9 @@
 body {
   background: black;
 }
+.container-fluid {
+  margin-bottom: 2rem;
+}
 img {
   width: 15rem;
   height: 15rem;
@@ -24,6 +27,7 @@ h1 {
 .neon-title {
   text-shadow: 0 0 15px #ffc400, 0 0 20px #ffc400;
   animation: blink 2s infinite backwards;
+  letter-spacing: 3px;
 }
 @keyframes blink {
   to {
@@ -31,9 +35,154 @@ h1 {
     text-shadow: none;
   }
 }
+.cards-line1,
+.cards-line2 {
+  justify-content: center;
+  color: whitesmoke;
+}
 .cards-container {
   border: 3px solid whitesmoke;
-  margin: 2rem 10rem 0 10rem;
+  margin: 2rem 20rem 0 20rem;
   border-radius: 1rem;
   box-shadow: inset 0 0 10px red, 0 0 10px red;
+}
+.flicker-number-cards-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.flicker-number-cards-container p {
+  /*margin: revert;*/
+}
+.simbols-left {
+  font-size: 20px;
+  margin-right: 1rem;
+}
+.flicker-left1 {
+  color: #e2faff;
+  text-shadow: 0 0 5px #e2faff, 0 0 15px #85e0ff, 0 0 30px #00d5ff;
+  animation: blink 2s infinite backwards steps(2);
+}
+
+.flicker-left2 {
+  color: #fef17f;
+  text-shadow: 0 0 5px #fef17f, 0 0 15px #ffec4a, 0 0 30px #ffc400;
+  animation: blink 2.5s infinite backwards steps(6);
+}
+
+.simbols-right {
+  margin-left: 1rem;
+  font-size: 20px;
+  margin-right: 1rem;
+  text-shadow: 0 0 5px #fff597, 0 0 10px #ffec4a, 0 0 15px #ffc400;
+}
+.flicker-right1 {
+  color: #e8baff;
+  text-shadow: 0 0 5px #e8baff, 0 0 15px #b57dff, 0 0 30px #8957ff;
+  animation: blink 1.5s infinite backwards steps(8);
+}
+
+.flicker-right2 {
+  color: rgb(253, 138, 96);
+  text-shadow: 0 0 5px rgb(253, 138, 96), 0 0 15px orangered, 0 0 30px red;
+  animation: blink 3s infinite backwards steps(4);
+}
+@keyframes blink {
+  to {
+    color: grey;
+    text-shadow: none;
+  }
+}
+
+.number-cards {
+  min-width: 16rem;
+  background: black;
+  border: 2px solid #fffef9;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px #ffec4a, 0 0 15px #ffc400;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bold;
+}
+.buttons-container {
+  margin: 2rem 0rem 2rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+.sort-container-btn {
+  display: inline-grid;
+}
+.draw {
+  min-width: 8rem;
+  min-height: 13rem;
+  border-radius: 1rem;
+  border: 2px solid rgb(253, 138, 96);
+  color: whitesmoke;
+  background: black;
+  box-shadow: inset 0 0 10px orangered, 0 0 15px red;
+}
+.buble-sort,
+.selection-sort {
+  min-width: 4rem;
+  min-height: 6rem;
+  border-radius: 1rem;
+  margin: 0rem 0rem 0rem 1rem;
+
+  color: whitesmoke;
+  background: black;
+}
+.buble-sort {
+  margin-bottom: 0.5rem;
+  border: 2px solid #e8baff;
+  box-shadow: inset 0 0 10px #b57dff, 0 0 15px #8957ff;
+}
+.selection-sort {
+  margin-top: 0.5rem;
+  border: 2px solid #e2faff;
+  box-shadow: inset 0 0 10px #85e0ff, 0 0 15px #00d5ff;
+}
+/*APP STYLES*/
+.poker-card {
+  background-color: black;
+  border: 2px solid #e094be;
+  box-shadow: 0 0 5px #e094be, 0 0 15px #e24b9e, 0 0 20px #e4007c;
+  min-width: 9rem;
+  max-width: 9rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 3rem;
+  padding: 0.1rem;
+  margin: 1rem;
+}
+.card-value {
+  align-self: center;
+}
+.black {
+  color: #d1cfcf;
+  text-shadow: 0 0 5px #d1cfcf, 0 0 15px rgb(163, 162, 162), 0 0 30px grey;
+}
+.red {
+  color: rgb(253, 138, 96);
+  text-shadow: 0 0 5px rgb(253, 138, 96), 0 0 15px orangered, 0 0 30px red;
+}
+.align-start {
+  align-self: flex-start;
+  margin-top: -1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.align-end {
+  align-self: flex-end;
+  margin-bottom: -1.25rem;
+  padding-bottom: 1.25rem;
+}
+.invert {
+  transform: rotate(0.5turn);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
